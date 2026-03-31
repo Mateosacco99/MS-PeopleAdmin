@@ -1,7 +1,9 @@
+import NavBar from "./components/NavBar"
+
 const App = () => {
   return (
     <div>
-        <h1>MS People Admin</h1>
+        <NavBar />
     </div>
   )
 }

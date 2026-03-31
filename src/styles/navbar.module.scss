@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+.navbar {
+    background-color: white;
+    padding: 2rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 5.5rem;
+    background: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    color: $MS-deepblue;
+    z-index: 10;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, $MS-navyblue 0%, $MS-deepblue 50%, $MS-brightblue 100%);
+  }
+}
+
+.navbarLogo {
+  height: 75px;
+  margin-left: 15px;
+  margin-right: 20px;
+  object-fit: contain;
+}
