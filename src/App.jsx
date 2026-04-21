@@ -9,7 +9,12 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<MainLayout />} />
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<div>Dashboard</div>} />
+            <Route path="/profile" element={<div>Profile</div>} />
+            <Route path="/users" element={<div>Users</div>} />
+            <Route path="/settings" element={<div>Settings</div>} />
+          </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

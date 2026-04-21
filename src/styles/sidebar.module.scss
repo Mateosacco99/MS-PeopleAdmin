@@ -1,0 +1,131 @@
+@use 'variables' as *;
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(28, 45, 74, 0.1);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: $MS-gradient;
+  }
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 0;
+}
+
+.sidebarLogo {
+  height: 50px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.roleLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $MS-deepblue;
+  white-space: nowrap;
+}
+
+.sidebarContent {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.menuIcon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.menuLabel {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebarFooter {
+  padding: 1.5rem;
+  border-top: 1px solid #e8e8e8;
+  margin-top: auto;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.username {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: $MS-gray;
+  flex: 1;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logoutSection {
+  margin-top: auto;
+  padding: 0 0.5rem;
+
+  button {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.menuItem {
+  &.active {
+    background-color: rgba(2, 131, 200, 0.1);
+    color: $MS-brightblue;
+    border-left: 3px solid $MS-brightblue;
+    padding-left: calc(1.5rem - 3px);
+  }
+}
+
+.active {
+  background-color: rgba(2, 131, 200, 0.1) !important;
+  color: $MS-brightblue !important;
+  border-left: 3px solid $MS-brightblue;
+  padding-left: calc(1.5rem - 3px) !important;
+}
+

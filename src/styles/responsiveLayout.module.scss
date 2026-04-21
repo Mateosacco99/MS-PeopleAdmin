@@ -1,0 +1,39 @@
+@use 'breakpoints' as *;
+@use 'variables' as *;
+
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @include laptop {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.mainContent {
+  flex: 1;
+  overflow-y: auto;
+
+  @include mobile {
+    order: 1;
+  }
+
+  @include tablet {
+    order: 1;
+  }
+
+  @include laptop {
+    order: 2;
+    margin-left: 0;
+  }
+
+  @include desktop {
+    order: 2;
+    margin-left: 0;
+  }
+}

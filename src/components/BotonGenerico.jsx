@@ -11,6 +11,8 @@ export function BotonGenerico ({
     const tiposDeBoton = [
         'accion',
         'accionSecundario',
+        'sidebar',
+        'sidebarSalir',
     ];
     const tipoValido = tiposDeBoton.includes(tipo) ? tipo : 'primario';
 
