@@ -21,13 +21,20 @@
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, $MS-navyblue 0%, $MS-deepblue 50%, $MS-brightblue 100%);
+    background: $MS-gradient;
   }
 }
 
 .navbarLogo {
   height: 75px;
-  margin-left: 15px;
   margin-right: 20px;
   object-fit: contain;
+}
+
+.userIcon {
+  font-size: 2rem;
+  color: $MS-deepblue;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

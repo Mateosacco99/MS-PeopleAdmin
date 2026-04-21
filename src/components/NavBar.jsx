@@ -9,7 +9,7 @@ const NavBar = () => {
     <div className={styles.navbar}>
       <img src={logo} alt="Logo" className={styles.navbarLogo} />
       
-      <div><FaUserCircle/></div>
+      <button className={styles.userIcon}><FaUserCircle/></button>
     </div>
   )
 }
