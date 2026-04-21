@@ -38,6 +38,8 @@ const User = () => {
       </button>
       {dropdownOpen && (
         <div className={styles.dropdown}>
+          <div className={styles.username}>Usuario</div>
+          <hr></hr>
           <button className={styles.logoutBtn} onClick={handleLogout}>
             Cerrar Sesión
           </button>
