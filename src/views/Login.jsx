@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from '../styles/login.module.scss'
 import { BotonGenerico } from '../components/BotonGenerico'
 
 const Login = () => {
+  const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Login attempt:', { username, password })
+    setError('')
+
+    const validUsername = 'admin'
+    const validPassword = 'admin'
+
+    if (username === validUsername && password === validPassword) {
+      navigate('/main')
+    } else {
+      setError('Usuario o contraseña inválidos')
+    }
   }
 
   return (
@@ -20,6 +32,7 @@ const Login = () => {
           className={styles.loginLogo} 
         />
         <form onSubmit={handleSubmit}>
+          {error && <div className={styles.errorMessage}>{error}</div>}
           <div>
             <label htmlFor="username">Usuario</label>
             <input 
@@ -53,3 +66,4 @@ const Login = () => {
 }
 
 export default Login
+
