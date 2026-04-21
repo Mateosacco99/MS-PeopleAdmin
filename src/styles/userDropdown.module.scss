@@ -39,12 +39,12 @@
 
 .username {
   padding: 0.75rem 1rem;
-  color: $MS-deepblue;
+  color: $MS-gray;
   font-weight: 600;
 
   &:hover {
     background-color: #f5f5f5;
-    color: color.adjust($MS-brightblue, $lightness: 20%);
+    color: $MS-deepblue; //color.adjust($MS-brightblue, $lightness: 20%);
   }
 }
 
@@ -54,6 +54,7 @@
   background-color: transparent;
   border: none;
   color: $MS-gray;
+  font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease;

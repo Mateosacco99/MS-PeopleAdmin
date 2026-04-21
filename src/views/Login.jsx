@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
 import styles from '../styles/login.module.scss'
 import { BotonGenerico } from '../components/BotonGenerico'
 
 const Login = () => {
   const navigate = useNavigate()
+  const { login } = useContext(UserContext)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -17,6 +19,7 @@ const Login = () => {
     const validPassword = 'admin'
 
     if (username === validUsername && password === validPassword) {
+      login(username)
       navigate('/main')
     } else {
       setError('Usuario o contraseña inválidos')
