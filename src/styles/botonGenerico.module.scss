@@ -1,0 +1,103 @@
+@use '../styles/_variables.scss' as *;
+@use '../styles/_breakpoints.scss' as *;
+@use 'sass:color';
+
+.boton{
+    border-radius: 0.5rem;
+    font-weight:600;
+    font-size:0.9rem;
+    padding: 0.5rem 1rem;
+    border:none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+
+    @include mobile {
+        margin-top: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    &:disabled{
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+}
+
+.botonAccion[type='submit'] {
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(90deg, $MS-deepblue, $MS-brightblue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(2, 131, 200, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include mobile {
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.botonAccionSecundario {
+  padding: 0.6rem 1.2rem;
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(2, 131, 200, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include mobile {
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
