@@ -6,8 +6,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/main" element={<MainLayout />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<MainLayout />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
@@ -15,4 +15,3 @@ const App = () => {
 }
 
 export default App
-
