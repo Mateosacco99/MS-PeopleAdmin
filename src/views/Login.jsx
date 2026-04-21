@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../styles/login.module.scss'
+import { BotonGenerico } from '../components/BotonGenerico'
 
 const Login = () => {
   const [username, setUsername] = useState('')
@@ -43,7 +44,8 @@ const Login = () => {
               required
             />
           </div>
-          <button type="submit">Iniciar Sesion</button>
+          <BotonGenerico tipo="accion" type="submit">Iniciar Sesion</BotonGenerico>
+          <BotonGenerico tipo="accionSecundario">Olvide mi contraseña</BotonGenerico>
         </form>
       </div>
     </div>
