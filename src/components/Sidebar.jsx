@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 import styles from '../styles/sidebar.module.scss'
 import logo from '/img/logo.png'
-import { FaHome, FaUser, FaUsers, FaCog, FaSignOutAlt } from 'react-icons/fa'
+import { FaHome, FaUser, FaUsers, FaCog, FaSignOutAlt, FaFileContract } from 'react-icons/fa'
 import { BotonGenerico } from './BotonGenerico'
 
 const Sidebar = () => {
@@ -12,9 +12,9 @@ const Sidebar = () => {
   const { user, logout } = useContext(UserContext)
 
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: FaHome, path: '/' },
+    { id: 'dashboard', label: 'Inicio', icon: FaHome, path: '/' },
     { id: 'profile', label: 'Perfil', icon: FaUser, path: '/profile' },
-    { id: 'users', label: 'Usuarios', icon: FaUsers, path: '/users' },
+    { id: 'recibos', label: 'Mis Recibos', icon: FaFileContract, path: '/recibos' },
     { id: 'settings', label: 'Configuración', icon: FaCog, path: '/settings' },
   ]
 
