@@ -29,11 +29,11 @@
 
   @include laptop {
     order: 2;
-    margin-left: 0;
+    margin-left: 5rem;
   }
 
   @include desktop {
     order: 2;
-    margin-left: 0;
+    margin-left: 5rem;
   }
 }

@@ -1,33 +1,73 @@
 @use 'variables' as *;
 
 .sidebar {
-  width: 180px;
+  width: 68px;
   height: 100vh;
   background-color: white;
   position: fixed;
   left: 0;
   top: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   box-shadow: 2px 0 8px rgba(28, 45, 74, 0.1);
-  z-index: 9;
+  z-index: 100;
   display: flex;
   flex-direction: column;
+  transition: width 0.3s ease;
+
+  &:hover {
+    width: 220px;
+
+    .logoSection {
+      padding: 1.5rem;
+      justify-content: flex-start;
+    }
+
+    .sidebarLogo {
+      max-width: 150px;
+    }
+
+    .roleLabel {
+      opacity: 1;
+      max-width: 150px;
+      margin-left: 0.75rem;
+      transition-delay: 0.1s;
+    }
+
+    .menuLabel,
+    .logoutLabel {
+      opacity: 1;
+      max-width: 150px;
+      transition-delay: 0.1s;
+    }
+
+    .menuItem {
+      gap: 0.75rem;
+    }
+
+    .logoutSection button {
+      gap: 0.75rem;
+    }
+  }
 }
 
 .logoSection {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
+  justify-content: center;
   border-bottom: 1px solid #e8e8e8;
   margin-bottom: 0;
+  white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 .sidebarLogo {
   height: 2rem;
+  max-width: 44px;
   object-fit: contain;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   flex-shrink: 0;
 
   &:hover {
@@ -40,6 +80,10 @@
   font-weight: 700;
   color: $MS-deepblue;
   white-space: nowrap;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
 }
 
 .sidebarContent {
@@ -68,19 +112,42 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  opacity: 0;
+  max-width: 0;
+  transition: all 0.2s ease;
+}
+
+.logoutIcon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.logoutLabel {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
 .logoutSection {
   margin-top: auto;
-  padding: 0 0.5rem;
+  padding: 0;
 
   button {
     width: 100%;
     justify-content: flex-start;
+    gap: 0;
+    transition: gap 0.3s ease;
   }
 }
 
 .menuItem {
+  gap: 0;
+  justify-content: flex-start;
+  transition: gap 0.3s ease;
+
   &.active {
     background-color: rgba(2, 131, 200, 0.1);
     color: $MS-brightblue;
