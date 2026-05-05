@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { FaBars } from 'react-icons/fa'
 import styles from '../styles/navbar.module.scss'
 import logo from '/img/logo.png'
 import User from './UserDropdown'
@@ -9,13 +10,16 @@ const NavBar = () => {
 
   return (
     <div className={styles.navbar}>
-      <img 
-        src={logo} 
-        alt="Logo" 
+      <img
+        src={logo}
+        alt="Logo"
         className={styles.navbarLogo}
         onClick={() => navigate('/')}
       />
-      <User />
+      <div className={styles.icons}>
+        <FaBars className={styles.hamburgerIcon} />
+        <User />
+      </div>
     </div>
   )
 }
