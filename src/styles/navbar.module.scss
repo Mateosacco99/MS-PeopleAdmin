@@ -2,7 +2,8 @@
 
 .navbar {
   background-color: white;
-  padding: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -26,8 +27,7 @@
 }
 
 .navbarLogo {
-  height: 55px;
-  margin-right: 20px;
+  height: 1.5rem;
   object-fit: contain;
   cursor: pointer;
   transition: opacity 0.3s ease;
