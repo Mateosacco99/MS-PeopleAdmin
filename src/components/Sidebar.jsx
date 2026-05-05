@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 import styles from '../styles/sidebar.module.scss'
 import logo from '/img/logo.png'
-import { FaHome, FaUser, FaUsers, FaCog, FaSignOutAlt, FaFileContract } from 'react-icons/fa'
+import { FaHome, FaUser, FaUsers, FaCog, FaSignOutAlt, FaFileContract, FaCommentAlt } from 'react-icons/fa'
 import { BotonGenerico } from './BotonGenerico'
 
 const Sidebar = () => {
@@ -15,6 +15,7 @@ const Sidebar = () => {
     { id: 'dashboard', label: 'Inicio', icon: FaHome, path: '/' },
     { id: 'profile', label: 'Perfil', icon: FaUser, path: '/profile' },
     { id: 'recibos', label: 'Mis Recibos', icon: FaFileContract, path: '/recibos' },
+    { id: 'comunicaciones', label: 'Comunicaciones', icon: FaCommentAlt, path: '/comunicaciones' },
     { id: 'settings', label: 'Configuración', icon: FaCog, path: '/settings' },
   ]
 
@@ -31,15 +32,15 @@ const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.logoSection}>
-        <img 
-          src={logo} 
-          alt="Logo" 
+        <img
+          src={logo}
+          alt="Logo"
           className={styles.sidebarLogo}
           onClick={() => navigate('/')}
         />
         <div className={styles.roleLabel}>{user?.role}</div>
       </div>
-      
+
       <nav className={styles.sidebarContent}>
         <ul className={styles.menuList}>
           {menuItems.map((item) => {
@@ -60,18 +61,18 @@ const Sidebar = () => {
 
           })}
         </ul>
-            <div className={styles.logoutSection}>
-              <BotonGenerico 
-                tipo="sidebarSalir"
-                onClick={() => {
-                  logout()
-                  navigate('/login')
-                }}
-              >
-                <FaSignOutAlt className={styles.logoutIcon} />
-                <span className={styles.logoutLabel}>Cerrar Sesión</span>
-              </BotonGenerico>
-            </div>
+        <div className={styles.logoutSection}>
+          <BotonGenerico
+            tipo="sidebarSalir"
+            onClick={() => {
+              logout()
+              navigate('/login')
+            }}
+          >
+            <FaSignOutAlt className={styles.logoutIcon} />
+            <span className={styles.logoutLabel}>Cerrar Sesión</span>
+          </BotonGenerico>
+        </div>
       </nav>
     </div>
   )
