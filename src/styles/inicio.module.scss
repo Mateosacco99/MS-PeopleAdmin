@@ -1,0 +1,102 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+
+.dashboardContainer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #f4f6f8;
+  min-height: calc(100vh);
+
+  @include mobile {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+
+.header {
+  h1 {
+    color: $MS-navyblue;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    color: #666;
+    margin: 0;
+  }
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include laptop {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.sectionCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    color: $MS-navyblue;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.avisosList {
+  display: flex;
+  flex-direction: column;
+}
+
+.avisoItem {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .avisoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    h4 {
+      margin: 0;
+      color: $MS-deepblue;
+      font-size: 1rem;
+    }
+
+    .date {
+      font-size: 0.85rem;
+      color: #888;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}

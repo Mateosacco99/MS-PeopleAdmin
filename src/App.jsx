@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from "./views/Login"
 import MainLayout from "./views/MainLayout"
 import { UserProvider } from './context/UserContext'
+import Inicio from './views/Inicio'
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route element={<MainLayout />}>
-            <Route path="/" element={<div>Inicio</div>} />
+            <Route path="/" element={<Inicio />} />
             <Route path="/perfil" element={<div>Mi Perfil</div>} />
             <Route path="/recibos" element={<div>Mis Recibos</div>} />
             <Route path="/comunicaciones" element={<div>Comunicaciones</div>} />
