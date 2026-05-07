@@ -1,23 +1,20 @@
 export const avisos = [
     {
         id: 1,
-        title: 'Actualización de Políticas',
-        date: '2026-05-01',
-        content: 'Se han actualizado las políticas de trabajo remoto. Por favor, revisar el documento adjunto.',
-        type: 'info'
+        title: 'Feriado dia del trabajador',
+        date: '2026-04-26',
+        content: 'El dia 01/05 nuestras sucursales estaran cerradas por el feriado del dia del trabajador.',
     },
     {
         id: 2,
-        title: 'Mantenimiento del Sistema',
-        date: '2026-05-08',
-        content: 'El sistema MS-PeopleAdmin estará inactivo por mantenimiento desde las 02:00 AM hasta las 04:00 AM.',
-        type: 'warning'
+        title: 'Recibos de Sueldo',
+        date: '2026-04-07',
+        content: 'Se informa que el dia de la fecha se encuentran disponibles los recibos de sueldo correspondientes al mes de Marzo, Por favor firmarlos a la brevedad.',
     },
     {
         id: 3,
-        title: 'Nuevos Beneficios',
-        date: '2026-05-05',
-        content: 'Descubre los nuevos beneficios de salud añadidos a tu plan.',
-        type: 'success'
+        title: 'Recordatorio de Vacaciones',
+        date: '2026-03-15',
+        content: 'Recuerda que el plazo para solicitar vacaciones de verano finaliza el 30 de Marzo.',
     }
 ];

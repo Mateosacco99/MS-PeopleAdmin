@@ -12,6 +12,13 @@
   @include mobile {
     padding: 1rem;
     gap: 1.5rem;
+    margin-top: 6rem;
+  }
+
+  @include tablet {
+    padding: 1rem;
+    gap: 1.5rem;
+    margin-top: 6rem;
   }
 }
 
