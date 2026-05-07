@@ -25,14 +25,14 @@ const Inicio = () => {
                                 </div>
                             ))
                         ) : (
-                            <p style={{ color: '#666' }}>No hay avisos recientes.</p>
+                            <p className={styles.emptyMessage}>No hay avisos recientes.</p>
                         )}
                     </div>
                 </div>
 
                 <div className={styles.sectionCard}>
                     <h2>Accesos Rápidos</h2>
-                    <p style={{ color: '#666' }}>Próximamente enlaces rápidos a las secciones más utilizadas.</p>
+                    <p className={styles.emptyMessage}>Próximamente enlaces rápidos a las secciones más utilizadas.</p>
                 </div>
             </div>
         </div>
