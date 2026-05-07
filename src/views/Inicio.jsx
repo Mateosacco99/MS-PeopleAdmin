@@ -14,15 +14,19 @@ const Inicio = () => {
                 <div className={styles.sectionCard}>
                     <h2>Avisos Recientes</h2>
                     <div className={styles.avisosList}>
-                        {avisos.map(aviso => (
-                            <div key={aviso.id} className={styles.avisoItem}>
-                                <div className={styles.avisoHeader}>
-                                    <h4>{aviso.title}</h4>
-                                    <span className={styles.date}>{aviso.date}</span>
+                        {avisos.length > 0 ? (
+                            avisos.map(aviso => (
+                                <div key={aviso.id} className={styles.avisoItem}>
+                                    <div className={styles.avisoHeader}>
+                                        <h4>{aviso.title}</h4>
+                                        <span className={styles.date}>{aviso.date}</span>
+                                    </div>
+                                    <p>{aviso.content}</p>
                                 </div>
-                                <p>{aviso.content}</p>
-                            </div>
-                        ))}
+                            ))
+                        ) : (
+                            <p style={{ color: '#666' }}>No hay avisos recientes.</p>
+                        )}
                     </div>
                 </div>
 
