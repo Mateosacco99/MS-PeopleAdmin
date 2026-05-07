@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 import styles from '../styles/login.module.scss'
 import { BotonGenerico } from '../components/BotonGenerico'
+import { empleadosList } from '../mock/mockEmpleados'
 
 const Login = () => {
   const navigate = useNavigate()
@@ -15,12 +16,19 @@ const Login = () => {
     e.preventDefault()
     setError('')
 
-    const validUsername = 'admin'
-    const validPassword = 'admin'
+    const foundUser = empleadosList.find(
+      emp => emp.username === username && emp.password === password
+    )
 
-    if (username === validUsername && password === validPassword) {
-      login(username)
-      navigate('/main')
+    if (foundUser) {
+      login({
+        username: foundUser.username,
+        role: foundUser.rol,
+        nombre: foundUser.nombre,
+        apellido: foundUser.apellido,
+        sexo: foundUser.sexo
+      })
+      navigate('/')
     } else {
       setError('Usuario o contraseña inválidos')
     }
@@ -29,18 +37,18 @@ const Login = () => {
   return (
     <div className={styles.loginSection}>
       <div className={styles.loginContent}>
-        <img 
-          src="/img/logo.png" 
-          alt="Company Logo" 
-          className={styles.loginLogo} 
+        <img
+          src="/img/logo.png"
+          alt="Company Logo"
+          className={styles.loginLogo}
         />
         <form onSubmit={handleSubmit}>
           {error && <div className={styles.errorMessage}>{error}</div>}
           <div>
             <label htmlFor="username">Usuario</label>
-            <input 
-              type="text" 
-              id="username" 
+            <input
+              type="text"
+              id="username"
               name="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -50,9 +58,9 @@ const Login = () => {
           </div>
           <div>
             <label htmlFor="password">Contraseña</label>
-            <input 
-              type="password" 
-              id="password" 
+            <input
+              type="password"
+              id="password"
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

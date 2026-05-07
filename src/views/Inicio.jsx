@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import styles from '../styles/inicio.module.scss';
 import { avisos } from '../mock/mockAvisos';
 
 const Inicio = () => {
+    const { user } = useContext(UserContext);
+
     return (
         <div className={styles.dashboardContainer}>
             <div className={styles.header}>
                 <h1>Inicio</h1>
-                <p>Bienvenido, nombre.</p>
+                <p>{user?.sexo === 'Femenino' ? 'Bienvenida' : 'Bienvenido'}, {user?.nombre}.</p>
             </div>
 
             <div className={styles.contentGrid}>

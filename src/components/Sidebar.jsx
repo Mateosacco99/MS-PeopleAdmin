@@ -38,7 +38,7 @@ const Sidebar = () => {
           className={styles.sidebarLogo}
           onClick={() => navigate('/')}
         />
-        <div className={styles.roleLabel}>{user?.role}</div>
+        <div className={styles.roleLabel}>{user?.nombre} {user?.apellido}</div>
       </div>
 
       <nav className={styles.sidebarContent}>
