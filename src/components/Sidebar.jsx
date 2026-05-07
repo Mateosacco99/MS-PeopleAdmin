@@ -15,7 +15,7 @@ const Sidebar = () => {
     { id: 'dashboard', label: 'Inicio', icon: FaHome, path: '/' },
     { id: 'perfil', label: 'Mi Perfil', icon: FaUser, path: '/perfil' },
     { id: 'recibos', label: 'Mis Recibos', icon: FaFileContract, path: '/recibos' },
-    { id: 'comunicaciones', label: 'Comunicaciones', icon: FaCommentAlt, path: '/comunicaciones' },
+    { id: 'avisos', label: 'Avisos', icon: FaCommentAlt, path: '/avisos' },
     { id: 'configuracion', label: 'Configuración', icon: FaCog, path: '/configuracion' },
   ]
 
