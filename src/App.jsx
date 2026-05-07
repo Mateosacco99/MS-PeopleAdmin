@@ -3,6 +3,10 @@ import Login from "./views/Login"
 import MainLayout from "./views/MainLayout"
 import { UserProvider } from './context/UserContext'
 import Inicio from './views/Inicio'
+import Perfil from './views/Perfil'
+import Recibos from './views/Recibos'
+import Avisos from './views/Avisos'
+import Configuracion from './views/Configuracion'
 
 const App = () => {
   return (
@@ -12,10 +16,10 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route element={<MainLayout />}>
             <Route path="/" element={<Inicio />} />
-            <Route path="/perfil" element={<div>Mi Perfil</div>} />
-            <Route path="/recibos" element={<div>Mis Recibos</div>} />
-            <Route path="/avisos" element={<div>Comunicaciones</div>} />
-            <Route path="/configuracion" element={<div>Configuración</div>} />
+            <Route path="/perfil" element={<Perfil />} />
+            <Route path="/recibos" element={<Recibos />} />
+            <Route path="/avisos" element={<Avisos />} />
+            <Route path="/configuracion" element={<Configuracion />} />
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
