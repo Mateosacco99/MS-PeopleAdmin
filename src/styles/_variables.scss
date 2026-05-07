@@ -4,19 +4,19 @@ $MS-deepblue: #0373B2;
 $MS-brightblue: #0283C8;
 $MS-lightblue: #0695D8;
 
-$MS-gradient: linear-gradient(
-      90deg,
-      rgba($MS-navyblue, 0) 0%,
-      $MS-deepblue 25%,
-      $MS-deepblue 75%,
-      rgba($MS-navyblue, 0) 100%
-    );
+$MS-done: #4CAF50;
+$MS-progress: #FFC107;
+$MS-cancel: #F44336;
 
-$MS-darkModeBackground: linear-gradient(
-    135deg,
-    #1a1a1a 0%,
-    #2d2d2d 100%
-    );
+$MS-gradient: linear-gradient(90deg,
+        rgba($MS-navyblue, 0) 0%,
+        $MS-deepblue 25%,
+        $MS-deepblue 75%,
+        rgba($MS-navyblue, 0) 100%);
+
+$MS-darkModeBackground: linear-gradient(135deg,
+        #1a1a1a 0%,
+        #2d2d2d 100%);
 
 $MS-danger: #ff4d4d;
 $MS-success: #4CAF50;
