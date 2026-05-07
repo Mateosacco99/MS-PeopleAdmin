@@ -16,5 +16,11 @@ export const avisos = [
         title: 'Recordatorio de Vacaciones',
         date: '2026-03-15',
         content: 'Recuerda que el plazo para solicitar vacaciones de verano finaliza el 30 de Marzo.',
+    },
+    {
+        id: 4,
+        title: 'Recordatorio de Vacaciones',
+        date: '2026-03-15',
+        content: 'Recuerda que el plazo para solicitar vacaciones de verano finaliza el 30 de Marzo.',
     }
 ];

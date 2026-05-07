@@ -111,3 +111,16 @@
 .emptyMessage {
   color: $MS-empty;
 }
+
+.verMasLink {
+  text-align: left;
+  margin-top: 0.75rem;
+  color: $MS-deepblue;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
